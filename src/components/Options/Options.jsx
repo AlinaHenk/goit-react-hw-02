@@ -1,11 +1,11 @@
 import css from "./Option.module.css";
 
-export default function Options() {
+export default function Options({ onUpdate }) {
   return (
     <div className={css.buttonHolder}>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
+      <button onClick={() => onUpdate("good")}>Good</button>
+      <button onClick={() => onUpdate("neutral")}>Neutral</button>
+      <button onClick={() => onUpdate("bad")}>Bad</button>
       <button>Reset</button>
     </div>
   );
