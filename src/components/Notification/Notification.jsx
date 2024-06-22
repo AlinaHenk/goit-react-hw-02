@@ -1,3 +1,5 @@
+import css from "./Notification.module.css";
+
 export default function Notification() {
-  return <div>No feedback yet</div>;
+  return <div className={css.notification}>No feedback yet</div>;
 }

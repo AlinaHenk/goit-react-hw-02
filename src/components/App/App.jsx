@@ -7,6 +7,9 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [feedbacks, setFeedbacks] = useState(() => {
     const savedFeedbacks = window.localStorage.getItem("saved-feedbacks");
+    if (savedFeedbacks !== null) {
+      return JSON.parse(savedFeedbacks);
+    }
     return {
       good: 0,
       neutral: 0,
